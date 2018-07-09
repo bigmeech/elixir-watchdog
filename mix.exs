@@ -3,7 +3,7 @@ defmodule ElixirWatchdogPoc.MixProject do
 
   def project do
     [
-      app: :elixir_watchdog_poc,
+      app: :application,
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
