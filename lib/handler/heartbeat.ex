@@ -1,5 +1,5 @@
 defmodule Watchdog.Handler do
-    defmodule Agent do
+    defmodule Heartbeat do
         def init(options), do: options
 
         def call(conn, opts) do

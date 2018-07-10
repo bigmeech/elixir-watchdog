@@ -3,6 +3,6 @@ defmodule Watchdog.Router do
 
     plug Plug.Logger
 
-    forward "/api/pulse/:pid", to: Watchdog.Handler.Agent
+    forward "/api/pulse/:pid", to: Watchdog.Handler.Heartbeat
     match(_, do: send_resp(conn, 404, "404 Not Found"))
 end
