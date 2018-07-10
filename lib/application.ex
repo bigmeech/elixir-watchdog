@@ -4,7 +4,7 @@ defmodule Watchdog do
 
   def start(_type, _args) do
     children = [
-      Plug.Adapters.Cowboy.child_spec(:http, Watchdog.Service, [], port: 8550)
+      Plug.Adapters.Cowboy.child_spec(:http, Watchdog.Router, [], port: 8550)
     ]
 
     Logger.info("WatchDog Server started");
