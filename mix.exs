@@ -14,7 +14,7 @@ defmodule ElixirWatchdogPoc.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      applications: [:poolboy, :cowboy, :plug, :poison],
+      applications: [:poolboy, :cowboy, :plug, :poison, :httpoison],
       extra_applications: [:logger],
       mod: {Watchdog, []}
     ]
@@ -26,7 +26,8 @@ defmodule ElixirWatchdogPoc.MixProject do
       {:cowboy, "~> 1.0.3"},
       {:plug, "~> 1.0" },
       {:poison, "~> 3.1"},
-      {:poolboy, ">= 0.0.0"}
+      {:poolboy, ">= 0.0.0"},
+      {:httpoison, "~> 1.0"}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
     ]
