@@ -1,9 +1,9 @@
 defmodule Watchdog.Router do
     use Plug.Router
 
+    plug Plug.Logger
     plug :match
     plug :dispatch
-    plug Plug.Logger
 
     forward "/api/pulse/:pid", to: Watchdog.Handler.Heartbeat
     match _ do 
