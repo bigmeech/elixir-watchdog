@@ -5,7 +5,9 @@ defmodule Watchdog.Router do
     plug :match
     plug :dispatch
 
-    forward "/api/pulse/:pid", to: Watchdog.Handler.Heartbeat
+    post "/api/pulse", to: Watchdog.Handler.Register
+    get "/api/pulse/:pid", to: Watchdog.Handler.Reset
+    
     match _ do 
         send_resp(conn, 404, "404 Not Found")
     end
